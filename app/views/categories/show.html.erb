@@ -1,0 +1,9 @@
+<h1><%= @category.name %> Articles</h1>
+<div>
+  <p><% @category.articles.order(created_at: :desc).each do |article| %>
+  	<div>
+                       <%= link_to article.title, article %>
+                   </div>
+                     <% end %>
+  </p>
+</div>
